@@ -7,11 +7,13 @@ import com.bytecode.impl.UPI;
 import com.bytecode.in.IPayment;
 
 public class PaymentFactory {
-	private static IPayment iPayment = null;
+	
+	private static IPayment iPayment=null;
 
 	public static IPayment getPaymentModeObject(String modeName) {
+		
 		if (modeName.equals("credit")) {
-			iPayment = new CreditCard();
+			iPayment = new CreditCard();//object kisne bnaya hai??
 		} else if (modeName.equals("debit")) {
 			iPayment = new DebitCard();
 		} else if (modeName.equals("upi")) {

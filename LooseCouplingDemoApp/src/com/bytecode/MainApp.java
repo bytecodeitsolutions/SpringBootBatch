@@ -9,13 +9,13 @@ import com.bytecode.in.IPayment;
 public class MainApp {
 
 	public static void main(String[] args) {
-		Scanner s1 = new Scanner(System.in);
+		Scanner s1 = new Scanner(System.in);//object ko kisne bnaya hai???
 		System.out.println("Please enter mode of payment");
 		String mode = s1.next();
 		System.out.println("Please enter payment amount");
 		double amount = s1.nextDouble();
-		IPayment iPayment = PaymentFactory.getPaymentModeObject(mode);
-		System.out.println(BillCollector.payment(iPayment, amount));
+		IPayment x = PaymentFactory.getPaymentModeObject(mode);
+		System.out.println(BillCollector.payment(x, amount));
 	}
 
 }
