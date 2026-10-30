@@ -7,6 +7,9 @@
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	
+	<bean id="r1" class="com.bytecode.beans.Radio" />
+
+
+	<bean id="f1" class="com.bytecode.beans.Frequency" />
        
 </beans>
