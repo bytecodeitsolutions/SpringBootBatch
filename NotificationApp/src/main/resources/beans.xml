@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="msg" class="com.bytecode.spring.beans.SMSNotificationServiceImpl"/>
+    
+	<bean id="email" class="com.bytecode.spring.beans.EmailNotificationServiceImpl"/>
+	
+	 <bean id="ns" class="com.bytecode.spring.service.NotificationService">
+	    <!-- <constructor-arg ref="email" />-->
+	    <property name="notification" ref="email"/>
+	 </bean>
+</beans>
