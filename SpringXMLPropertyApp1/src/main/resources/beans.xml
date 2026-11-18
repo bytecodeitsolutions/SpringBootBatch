@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
 
-	<bean id="s1" class="com.bytecode.main.beans.Student">
-		<property name="rno" value="101" />
-		<property name="name" value="Kayum" />
-		<property name="address" value="Kanpur" />
-		<property name="course" value="Java Full Stack" />
-		<property name="fee" value="48000" />
-	</bean>
-	
-	
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Load Properties File -->
+    <context:property-placeholder location="classpath:app.properties"/>
+
+    <bean id="s1" class="com.bytecode.main.beans.Student">
+
+        <property name="rno" value="${student.rno}"/>
+        <property name="name" value="${student.name}"/>
+        <property name="address" value="${student.address}"/>
+        <property name="course" value="${student.course}"/>
+        <property name="fee" value="${student.fee}"/>
+
+    </bean>
+
 </beans>
