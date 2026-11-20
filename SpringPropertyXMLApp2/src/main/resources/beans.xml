@@ -23,4 +23,17 @@
 
     </bean>
 
+	<bean id="s1" class="com.bytecode.beans.Student">
+		<property name="courses">
+
+			<list>
+				<value>java</value>
+				<value>python</value>
+				<value>DSA</value>
+				<value>DS</value>
+
+			</list>
+		</property>
+	</bean>
+
 </beans>

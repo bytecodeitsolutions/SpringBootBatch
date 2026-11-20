@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.bytecode.beans.Employee" autowire="byName">
+		<property name="empId" value="101" />
+		<property name="empName" value="Raja" />
+
+	</bean>
+
+
+	<bean id="dept1" class="com.bytecode.beans.Department" >
+		<property name="deptId" value="1122" />
+		<property name="deptName" value="HR" />
+	</bean>
+	
+	<bean id="department" class="com.bytecode.beans.Department">
+		<property name="deptId" value="2233" />
+		<property name="deptName" value="IT" />
+	</bean>
+
+</beans>
