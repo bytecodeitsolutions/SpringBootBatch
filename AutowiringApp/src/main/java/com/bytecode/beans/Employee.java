@@ -1,13 +1,23 @@
 package com.bytecode.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component 
 public class Employee {
 	private int empId;
 	private String empName;
 	
+	@Autowired
 	private Department department;
 	
 	public Employee() {
 		System.out.println("0 param cons=emp");
+	}
+
+	public Employee(Department department) {
+		System.out.println("dept param Employee class constructor");
+		this.department = department;
 	}
 
 	public Employee(int empId, String empName, Department department) {
